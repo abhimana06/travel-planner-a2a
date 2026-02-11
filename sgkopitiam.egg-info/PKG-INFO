@@ -1,0 +1,63 @@
+Metadata-Version: 2.4
+Name: sgkopitiam
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4>=4.13.4
+Requires-Dist: grandalf>=0.8
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: langchain>=0.3.27
+Requires-Dist: langchain-openai>=0.2.14
+Requires-Dist: langgraph>=0.6.6
+Requires-Dist: lxml>=6.0.2
+Requires-Dist: python-dotenv>=1.1.1
+Requires-Dist: pytz>=2025.2
+
+# Singapore Travel Planning Committee
+
+A LangGraph-based agentic workflow for planning trips to Singapore with a committee of specialized agents.
+
+## Set up
+
+### Option 1: Using venv (Recommended)
+
+```sh
+# Create and activate virtual environment
+python3 -m venv venv
+source venv/bin/activate  # On macOS/Linux
+# or: venv\Scripts\activate  # On Windows
+
+# Install dependencies
+pip install -e .
+
+# Run the application
+python main.py
+```
+
+### Option 2: Using uv
+
+```sh
+uv sync
+uv run python main.py
+```
+
+**Note:** If using uv with an existing venv, deactivate it first or use `uv sync --active`
+
+## Project Overview
+
+This project implements a multi-agent system for travel planning with:
+- **Abhishek** - Travel enthusiast who initiates trip ideas
+- **Abhijit** - Social media influencer suggesting trending destinations
+- **Santhi** - Budget planner ensuring financial feasibility
+- **Govind** - Itinerary specialist creating detailed plans
+
+## Starter steps
+
+1. Sketch Graph
+1. Go through dependencies
+1. Define State
+1. Define Tools (travel, weather, news)
+1. Define Agents (orchestrator, participants, summarizer)
+1. Define Nodes
+1. Define Graph (main.py)
